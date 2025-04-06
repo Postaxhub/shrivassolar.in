@@ -98,10 +98,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="../" class="nav-item nav-link active">Home</a>
+                <a href="../" class="nav-item nav-link">Home</a>
                 <a href="../about" class="nav-item nav-link">About</a>
                 <!-- <a href="./service" class="nav-item nav-link">Service</a> -->
-                <a href="../project" class="nav-item nav-link">Project</a>
+                <a href="../project" class="nav-item nav-link active">Project</a>
                 <a href="../Faq" class="nav-item nav-link">FAQ</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
@@ -141,96 +141,160 @@
 
 
     <!-- Projects Start -->
+   
+
+    <style>
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 15px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .project-location {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #555;
+            font-size: 14px;
+            max-height: 60px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .project-description.expanded {
+            max-height: 500px;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: #007BFF;
+            cursor: pointer;
+            padding: 0;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
     <div class="container-xxl py-5" style="margin-bottom: 15%;">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="text-primary">Our Projects</h6>
                 <h1 class="mb-4">Explore Our Latest Solar Panel Installations</h1>
             </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                     
-                        <li class="mx-2 active" data-filter=".solar">Solar Panels</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 mb-5 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
-                <!-- Solar Panels Portfolio Item 1 -->
-                <div class="col-lg-4 col-md-6 portfolio-item solar mb-5">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="../img/Group 7.webp" alt="Solar Panel Project">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="../img/Group 7.webp"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Shri vasudeva system</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">
-                            <span class="short-text">3.3 KWp Rooftop Solar energy system</span>
-                            <span class="long-text" style="display: none;"> with
-                                ToPCON panels for Mr. Govindhoss, Perungalathur. It is a 7 feet GISS structure with
-                                Growatt inverter. The system is Electrically safe with 3 separate Earth pits.</span>
-                            <a href="#" class="read-more">Read More</a>
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item solar mb-5">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="../img/Group 9.webp" alt="Solar Panel Project">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="../img/Group 9.webp"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Shri vasudeva system</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">
-                            <span class="short-text">Shri vasudeva system installed 4 KWp Rooftop Solar energy
-                                system</span>
-                            <span class="long-text" style="display: none;"> with ToPCON panels for Mr.Durai,
-                                Anakaputhur.
-                                It is installed on metal Roof with Growatt inverter. The system is Electrically safe
-                                with 3 separate Earth pits, Lightning Arrester and Surge Protecting Device</span>
-                            <a href="#" class="read-more">Read More</a>
-                        </h5>
-                    </div>
-                </div>
-                <!-- Solar Panels Portfolio Item 2 -->
-                <div class="col-lg-4 col-md-6 portfolio-item solar">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="../img/Group 8.webp" alt="Solar Panel Installation">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="../img/Group 8.webp"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i
-                                    class="fa fa-link" ></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Shri vasudeva system</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">
-                            <span class="short-text">Shri vasudeva system installed 3 KWp Rooftop
-                                Solar energy system with ToPCON panels</span>
-                            <span class="long-text" style="display: none;"> for RVNL MULTISPECIALITY HOSPITAL,
-                                THIRUMAZHISAI.
-                                It is installed on metal Roof with Growatt inverter. The system is Electrically safe
-                                with 3 separate Earth pits, Lightning Arrester and Surge Protecting Device.</span>
-                            <a href="#" class="read-more">Read More</a>
-                        </h5>
-                    </div>
-                </div>
+            <div class="projects-container" id="projectsContainer">
+                <!-- Cards will be injected here -->
             </div>
         </div>
     </div>
+    <script>
+        const projects = [
+         
+            {
+                title: "Vinayaga Electricals",
+                location: "Porur",
+                description: "We have installed 6KWp Rooftop Solar Power plant for Vinayaga Electricals, Porur. The panels are mounted over the Metal roof with Monorail structure.",
+                image: "../project_img/2.vinayaga electricals (2).jpeg"
+            },
+            {
+                title: "Chitralekha Clinic",
+                location: "Perungalathur",
+                description: "We have installed 3KWp Rooftop Solar Power plant for Dr.Chitralekha at Balaji Nagar, New Perungalathur. We have also installed 6KWp Solar Power Plant at their residence.",
+                image: "../project_img/3.chitralekha clinic.JPG"
+            },
+            {
+                title: "Murugan Industrial Gas Agencies",
+                location: "Chengalpet",
+                description: "We have installed 4KWp Rooftop Solar Power plant for Mr.Balamurugan, Founder of Murugan Industrial Gas Agencies, Mahindra World City. The panels are mounted on Extra High Rise structure with maximum safety.",
+                image: "../project_img/4.CHENGALPET(1).jpeg"
+            },
+         
+            {
+                title: "Vinayagar & Co",
+                location: "Kolathur",
+                description: "We have installed 3KWp Rooftop Solar Power plant for Mr.Ponvel, Founder of Vinayagar & Co. The panels are mounted over a 7 feet structure with maximum safety.",
+                image: "../project_img/6.Kolathur.jpeg"
+            },
+            {
+                title: "Subhathra Residence",
+                location: "Kayar, Thiruporur",
+                description: "We have installed 3KWp Rooftop Solar Hybrid Power plant for Mrs. Subhathra. Panels are mounted over a 7 feet structure. Battery backup is provided to energise the house for 2 days. Residence is at Perumal Kovil Street, Kayar.",
+                image: "../project_img/7.KAYAR.jpeg"
+            },
+            {
+                title: "Mr. Muthusamy Residence",
+                location: "Guduvancheri",
+                description: "We have installed 3KWp Rooftop Solar Power plant for Mr.Muthusamy, AEE, TANGEDCO. Panels are mounted over a 3 feet structure. Residence is at Kayarambedu.",
+                image: "../project_img/8.Guduvancheri_1.jpeg"
+            },
+            {
+                title: "Palm Villas, Unitech Uniworld City",
+                location: "Vandalur",
+                description: "We have installed 3KWp Rooftop Solar Power plant for Mr.Shankar at Palm Villas, UNITECH UNIWORLD CITY, Kandigai. Panels are mounted over a 10 feet structure with maximum safety.",
+                image: "../project_img/9.Vandalur_2.jpeg"
+            }
+        ];
+
+        const container = document.getElementById("projectsContainer");
+
+        projects.forEach(project => {
+            const card = document.createElement("div");
+            card.className = "project-card";
+            card.innerHTML = `
+            <img src="${project.image}" alt="${project.title}" class="project-img">
+            <div class="project-content">
+              <div class="project-title">${project.title}</div>
+              <div class="project-location">
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#007BFF" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 5px;">
+    <path d="M8 0a5.53 5.53 0 0 0-5.5 5.5c0 3.5 5.5 10.5 5.5 10.5s5.5-7 5.5-10.5A5.53 5.53 0 0 0 8 0zm0 7.5A2 2 0 1 1 8 3a2 2 0 0 1 0 4.5z"/>
+  </svg>
+  ${project.location}
+</div>
+              <div class="project-description">${project.description}</div>
+              <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+            </div>
+          `;
+            container.appendChild(card);
+        });
+
+        function toggleReadMore(button) {
+            const desc = button.previousElementSibling;
+            desc.classList.toggle("expanded");
+            
+            button.textContent = desc.classList.contains("expanded") ? "Read Less" : "Read More";
+        }
+    </script>
 
     <!-- Projects End -->
 
@@ -446,7 +510,15 @@
     <script src="../lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-     <script src="js/main.js"></script>
+     <script src="../js/main.js"></script>   <style>
+        #whatsapp-chat-btn {
+            cursor: pointer;
+        }
+
+        #whatsapp-call-btn {
+            cursor: pointer;
+        }
+    </style>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
